@@ -1,0 +1,26 @@
+{
+  "name": "OctopusApp",
+  "version": "1.0.0",
+  "description": "Aplicacion de control de potencias Octopus Automation",
+  "main": "controlador.js",
+  "scripts": {
+    "test": "node controlador.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/area-5I/OctopusApp.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Bootstrap",
+    "nunjucks",
+    "sawers",
+    "I&D"
+  ],
+  "author": "sass3r",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/area-5I/OctopusApp/issues"
+  },
+  "homepage": "https://github.com/area-5I/OctopusApp"
+}
