@@ -22,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/area-5I/OctopusApp/issues"
   },
-  "homepage": "https://github.com/area-5I/OctopusApp"
+  "homepage": "https://github.com/area-5I/OctopusApp",
+  "dependencies": {
+    "express": "^4.10.7",
+    "nano": "^6.0.2",
+    "nunjucks": "^1.1.0",
+    "request": "^2.51.0",
+    "socket.io": "^1.2.1"
+  }
 }
