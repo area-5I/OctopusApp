@@ -113,8 +113,9 @@ var saveF = function(nombres){
 };
 
 function encenderPot(slave,pot){
+  base.getConfig();
   var ruta;
-  var host = "http://192.168.0.65:8080";
+  var host = "http://"+config[0]+":"+config[1];
   switch(pot){
     case 0: ruta = "/" + slave + "A";
             break;
@@ -137,8 +138,9 @@ function encenderPot(slave,pot){
 }
 
 function apagarPot(slave,pot){
+  base.getConfig();
   var ruta;
-  var host = "http://192.168.0.65:8080";
+  var host = "http://"+config[0]+":"+config[1];
   switch(pot){
     case 0: ruta = "/" + slave + "a";
             break;
