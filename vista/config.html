@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Configuracion</title>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Jumbotron-narrow style -->
+    <link href="/bootstrap/css/jumbotron-narrow.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+    <div class="header">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li>
+            <a href="/">App</a>
+          </li>
+          <li>
+            <a href="/editar">Editar</a>
+          </li>
+          <li class="active">
+            <a href="/config">Configuracion</a>
+          </li>
+        </ul>
+      </nav>
+      <h3 class="text-muted">Configuracion</h3>
+    </div>
+    <center><img src="/img/logoctopus.png"></center>
+      <div>
+        <h2>IP:</h2>
+        <input type="text" id="IP" value="{{config[0]}}">
+        <h2>Puerto:</h2>
+        <input type="text" id="PORT"  value="{{config[1]}}"><br><br>
+        <button class="btn btn-success" onclick="saveConfig()">Guardar</button>
+      </div>
+      <br>
+      <br>
+
+    <footer class="footer">
+      <p>&copy; Sawers I&D 2014</p>
+    </footer>
+    </div>
+    <script src="http://localhost:8088/socket.io/socket.io.js"></script>
+    <script src="/bootstrap/js/config.js"></script>
+  </body>
+</html>

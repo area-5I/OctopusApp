@@ -1,0 +1,230 @@
+<html>
+ <head>
+   <title>Octopus app</title>
+   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Jumbotron-narrow style -->
+   <link href="/bootstrap/css/jumbotron-narrow.css" rel="stylesheet">
+   <link href="/bootstrap/css/app.css" rel="stylesheet">
+ </head>
+ <body>
+   <div class="container">
+     <div class="header">
+       <nav>
+         <ul class="nav nav-pills pull-right">
+           <li class="active">
+             <a href="/">App</a>
+           </li>
+           <li>
+             <a href="/editar">Editar</a>
+           </li>
+           <li>
+             <a href="/config">Configuracion</a>
+           </li>
+         </ul>
+       </nav>
+       <h3 class="text-muted">Octopus App</h3>
+     </div>
+     <div>
+     <center>
+     <nav>
+       <button class="btn btn-info btn-large" onclick="active('A')">A</button>
+       <button class="btn btn-primary btn-large" onclick="active('B')">B</button>
+       <button class="btn btn-success btn-large" onclick="active('C')">C</button>
+       <button class="btn btn-warning btn-large" onclick="active('D')">D</button>
+       <button class="btn btn-inverse btn-large" onclick="active('E')">E</button>
+       <button class="btn btn-danger btn-large" onclick="active('F')">F</button>
+     </nav>
+     <img src="/img/logoctopus.png">
+     </center>
+     <br>
+    </div>
+
+     <div class="jumbotron">
+
+       <div id="A" style="display:block;">
+            <center>
+            <table>
+              <tr>
+                <td>
+                  <button class="btn btn-info btn-large boton" onclick="onPot('A',0)">{{vA[0]}}</button>
+                </td>
+                <td>
+                  <button class="btn btn-info btn-large boton" onclick="onPot('A',1)">{{vA[1]}}</button>
+                </td>
+                <td>
+                  <button class="btn btn-info btn-large boton" onclick="onPot('A',2)">{{vA[2]}}</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="btn btn-info btn-large boton" onclick="onPot('A',3)">{{vA[3]}}</button>
+                </td>
+                <td>
+                  <button class="btn btn-info btn-large boton" onclick="onPot('A',4)">{{vA[4]}}</button>
+                </td>
+                <td>
+                  <button class="btn btn-info btn-large boton" onclick="onPot('A',5)">{{vA[5]}}</button>
+                </td>
+              </tr>
+            </table>
+            </center>
+       </div>
+
+       <div id="B" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <button class="btn btn-primary btn-large boton" onclick="onPot('B',0)">{{vB[0]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-primary btn-large boton" onclick="onPot('B',1)">{{vB[1]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-primary btn-large boton" onclick="onPot('B',2)">{{vB[2]}}</button>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <button class="btn btn-primary btn-large boton" onclick="onPot('B',3)">{{vB[3]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-primary btn-large boton" onclick="onPot('B',4)">{{vB[4]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-primary btn-large boton" onclick="onPot('B',5)">{{vB[5]}}</button>
+             </td>
+           </tr>
+         </table>
+         </center>
+
+       </div>
+       <div id="C" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <button class="btn btn-success btn-large boton" onclick="onPot('C',0)">{{vC[0]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-success btn-large boton" onclick="onPot('C',1)">{{vC[1]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-success btn-large boton" onclick="onPot('C',2)">{{vC[2]}}</button>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <button class="btn btn-success btn-large boton" onclick="onPot('C',3)">{{vC[3]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-success btn-large boton" onclick="onPot('C',4)">{{vC[4]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-success btn-large boton" onclick="onPot('C',5)">{{vC[5]}}</button>
+             </td>
+           </tr>
+         </table>
+         </center>
+
+       </div>
+       <div id="D" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <button class="btn btn-warning btn-large boton" onclick="onPot('D',0)">{{vD[0]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-warning btn-large boton" onclick="onPot('D',1)">{{vD[1]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-warning btn-large boton" onclick="onPot('D',2)">{{vD[2]}}</button>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <button class="btn btn-warning btn-large boton" onclick="onPot('D',3)">{{vD[3]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-warning btn-large boton" onclick="onPot('D',4)">{{vD[4]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-warning btn-large boton" onclick="onPot('D',5)">{{vD[5]}}</button>
+             </td>
+           </tr>
+         </table>
+         </center>
+
+       </div>
+       <div id="E" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <button class="btn btn-inverse btn-large boton" onclick="onPot('E',0)">{{vE[0]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-inverse btn-large boton" onclick="onPot('E',1)">{{vE[1]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-inverse btn-large boton" onclick="onPot('E',2)">{{vE[2]}}</button>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <button class="btn btn-inverse btn-large boton" onclick="onPot('E',3)">{{vE[3]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-inverse btn-large boton" onclick="onPot('E',4)">{{vE[4]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-inverse btn-large boton" onclick="onPot('E',5)">{{vE[5]}}</button>
+             </td>
+           </tr>
+         </table>
+         </center>
+
+       </div>
+       <div id="F" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <button class="btn btn-danger btn-large boton" onclick="onPot('F',0)">{{vF[0]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-danger btn-large boton" onclick="onPot('F',1)">{{vF[1]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-danger btn-large boton" onclick="onPot('F',2)">{{vF[2]}}</button>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <button class="btn btn-danger btn-large boton" onclick="onPot('F',3)">{{vF[3]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-danger btn-large boton" onclick="onPot('F',4)">{{vF[4]}}</button>
+             </td>
+             <td>
+               <button class="btn btn-danger btn-large boton" onclick="onPot('F',5)">{{vF[5]}}</button>
+             </td>
+           </tr>
+         </table>
+         </center>
+
+       </div>
+
+     </div>
+     <br>
+
+     <footer class="footer">
+       <p>&copy; Sawers I&D 2014</p>
+     </footer>
+
+   </div>
+   <script src="http://localhost:8088/socket.io/socket.io.js"></script>
+   <script src="/bootstrap/js/app.js"></script>
+ </body>
+</html>

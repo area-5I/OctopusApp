@@ -1,0 +1,421 @@
+<html>
+ <head>
+   <title>Octopus app</title>
+   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Jumbotron-narrow style -->
+   <link href="/bootstrap/css/jumbotron-narrow.css" rel="stylesheet">
+   <link href="/bootstrap/css/app.css" rel="stylesheet">
+ </head>
+ <body>
+   <div class="container">
+     <div class="header">
+       <nav>
+         <ul class="nav nav-pills pull-right">
+           <li>
+             <a href="/">App</a>
+           </li>
+           <li class="active">
+             <a href="/editar">Editar</a>
+           </li>
+           <li>
+             <a href="/config">Configuracion</a>
+           </li>
+         </ul>
+       </nav>
+       <h3 class="text-muted">Octopus App</h3>
+     </div>
+     <div>
+     <center>
+     <nav>
+       <button class="btn btn-info btn-large" onclick="active('A')">A</button>
+       <button class="btn btn-primary btn-large" onclick="active('B')">B</button>
+       <button class="btn btn-success btn-large" onclick="active('C')">C</button>
+       <button class="btn btn-warning btn-large" onclick="active('D')">D</button>
+       <button class="btn btn-inverse btn-large" onclick="active('E')">E</button>
+       <button class="btn btn-danger btn-large" onclick="active('F')">F</button>
+     </nav>
+     <img src="/img/logoctopus.png">
+     </center>
+     <br>
+    </div>
+
+     <div class="jumbotron">
+
+       <div id="A" style="display:block;">
+            <center>
+            <table>
+              <tr>
+                <td>
+                  <div>
+                  <input id="pot1A" class="texto" type="text" value="{{vA[0]}}">
+                  </div>
+                  <div>
+                  <button class="btn btn-info btn-large boton">{{vA[0]}}</button>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                  <input id="pot2A" class="texto" type="text" value="{{vA[1]}}">
+                  </div>
+                  <div>
+                  <button class="btn btn-info btn-large boton">{{vA[1]}}</button>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                  <input id="pot3A" class="texto" type="text" value="{{vA[2]}}">
+                  </div>
+                  <div>
+                  <button class="btn btn-info btn-large boton">{{vA[2]}}</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div>
+                  <input id="pot4A" class="texto" type="text" value="{{vA[3]}}">
+                  </div>
+                  <div>
+                  <button class="btn btn-info btn-large boton">{{vA[3]}}</button>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                  <input id="pot5A" class="texto" type="text" value="{{vA[4]}}">
+                  </div>
+                  <div>
+                  <button class="btn btn-info btn-large boton">{{vA[4]}}</button>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                  <input id="pot6A" class="texto" type="text" value="{{vA[5]}}">
+                  </div>
+                  <div>
+                  <button class="btn btn-info btn-large boton">{{vA[5]}}</button>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <button class="btn btn-success" onclick="saveA()">Guardar</button>
+            </center>
+       </div>
+
+       <div id="B" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <div>
+               <input id="pot1B" class="texto" type="text" value="{{vB[0]}}">
+               </div>
+               <div>
+               <button class="btn btn-primary btn-large boton">{{vB[0]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot2B" class="texto" type="text" value="{{vB[1]}}">
+               </div>
+               <div>
+               <button class="btn btn-primary btn-large boton">{{vB[1]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot3B" class="texto" type="text" value="{{vB[2]}}">
+               </div>
+               <div>
+               <button class="btn btn-primary btn-large boton">{{vB[2]}}</button>
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <div>
+               <input id="pot4B" class="texto" type="text" value="{{vB[3]}}">
+               </div>
+               <div>
+               <button class="btn btn-primary btn-large boton">{{vB[3]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot5B" class="texto" type="text" value="{{vB[4]}}">
+               </div>
+               <div>
+               <button class="btn btn-primary btn-large boton">{{vB[4]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot6B" class="texto" type="text" value="{{vB[5]}}">
+               </div>
+               <div>
+               <button class="btn btn-primary btn-large boton">{{vB[5]}}</button>
+               </div>
+             </td>
+           </tr>
+         </table>
+         <br>
+         <button class="btn btn-success" onclick="saveB()">Guardar</button>
+         </center>
+
+       </div>
+       <div id="C" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <div>
+               <input id="pot1C" class="texto" type="text" value="{{vC[0]}}">
+               </div>
+               <div>
+               <button class="btn btn-success btn-large boton">{{vC[0]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot2C" class="texto" type="text" value="{{vC[1]}}">
+               </div>
+               <div>
+               <button class="btn btn-success btn-large boton">{{vC[1]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot3C" class="texto" type="text" value="{{vC[2]}}">
+               </div>
+               <div>
+               <button class="btn btn-success btn-large boton">{{vC[2]}}</button>
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <div>
+               <input id="pot4C" class="texto" type="text" value="{{vC[3]}}">
+               </div>
+               <div>
+               <button class="btn btn-success btn-large boton">{{vC[3]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot5C" class="texto" type="text" value="{{vC[4]}}">
+               </div>
+               <div>
+               <button class="btn btn-success btn-large boton">{{vC[4]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot6C" class="texto" type="text" value="{{vC[5]}}">
+               </div>
+               <div>
+               <button class="btn btn-success btn-large boton">{{vC[5]}}</button>
+               </div>
+             </td>
+           </tr>
+         </table>
+         <br>
+         <button class="btn btn-success" onclick="saveC()">Guardar</button>
+         </center>
+
+       </div>
+       <div id="D" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <div>
+               <input id="pot1D" class="texto" type="text" value="{{vD[0]}}">
+               </div>
+               <div>
+               <button class="btn btn-warning btn-large boton">{{vD[0]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot2D" class="texto" type="text" value="{{vD[1]}}">
+               </div>
+               <div>
+               <button class="btn btn-warning btn-large boton">{{vD[1]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot3D" class="texto" type="text" value="{{vD[2]}}">
+               </div>
+               <div>
+               <button class="btn btn-warning btn-large boton">{{vD[2]}}</button>
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <div>
+               <input id="pot4D" class="texto" type="text" value="{{vD[3]}}">
+               </div>
+               <div>
+               <button class="btn btn-warning btn-large boton">{{vD[3]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot5D" class="texto" type="text" value="{{vD[4]}}">
+               </div>
+               <div>
+               <button class="btn btn-warning btn-large boton">{{vD[4]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot6D" class="texto" type="text" value="{{vD[5]}}">
+               </div>
+               <div>
+               <button class="btn btn-warning btn-large boton">{{vD[5]}}</button>
+               </div>
+             </td>
+           </tr>
+         </table>
+         <br>
+         <button class="btn btn-success" onclick="saveD()">Guardar</button>
+         </center>
+
+       </div>
+       <div id="E" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <div>
+               <input id="pot1E" class="texto" type="text" value="{{vE[0]}}">
+               </div>
+               <div>
+               <button class="btn btn-inverse btn-large boton">{{vE[0]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot2E" class="texto" type="text" value="{{vE[1]}}">
+               </div>
+               <div>
+               <button class="btn btn-inverse btn-large boton">{{vE[1]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot3E" class="texto" type="text" value="{{vE[2]}}">
+               </div>
+               <div>
+               <button class="btn btn-inverse btn-large boton">{{vE[2]}}</button>
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <div>
+               <input id="pot4E" class="texto" type="text" value="{{vE[3]}}">
+               </div>
+               <div>
+               <button class="btn btn-inverse btn-large boton">{{vE[3]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot5E" class="texto" type="text" value="{{vE[4]}}">
+               </div>
+               <div>
+               <button class="btn btn-inverse btn-large boton">{{vE[4]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot6E" class="texto" type="text" value="{{vE[5]}}">
+               </div>
+               <div>
+               <button class="btn btn-inverse btn-large boton">{{vE[5]}}</button>
+               </div>
+             </td>
+           </tr>
+         </table>
+         <br>
+         <button class="btn btn-success" onclick="saveE()">Guardar</button>
+         </center>
+
+       </div>
+       <div id="F" style="display:none;">
+         <center>
+         <table>
+           <tr>
+             <td>
+               <div>
+               <input id="pot1F" class="texto" type="text" value="{{vF[0]}}">
+               </div>
+               <div>
+               <button class="btn btn-danger btn-large boton">{{vF[0]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot2F" class="texto" type="text" value="{{vF[1]}}">
+               </div>
+               <div>
+               <button class="btn btn-danger btn-large boton">{{vF[1]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot3F" class="texto" type="text" value="{{vF[2]}}">
+               </div>
+               <div>
+               <button class="btn btn-danger btn-large boton">{{vF[2]}}</button>
+               </div>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <div>
+               <input id="pot4F" class="texto" type="text" value="{{vF[3]}}">
+               </div>
+               <div>
+               <button class="btn btn-danger btn-large boton">{{vF[3]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot5F" class="texto" type="text" value="{{vF[4]}}">
+               </div>
+               <div>
+               <button class="btn btn-danger btn-large boton">{{vF[4]}}</button>
+               </div>
+             </td>
+             <td>
+               <div>
+               <input id="pot6F" class="texto" type="text" value="{{vF[5]}}">
+               </div>
+               <div>
+               <button class="btn btn-danger btn-large boton">{{vF[5]}}</button>
+               </div>
+             </td>
+           </tr>
+         </table>
+         <br>
+         <button class="btn btn-success" onclick="saveF()">Guardar</button>
+         </center>
+       </div>
+
+     </div>
+     <br>
+
+     <footer class="footer">
+       <p>&copy; Sawers I&D 2014</p>
+     </footer>
+
+   </div>
+   <script src="http://localhost:8088/socket.io/socket.io.js"></script>
+   <script src="/bootstrap/js/edit.js"></script>
+ </body>
+</html>
